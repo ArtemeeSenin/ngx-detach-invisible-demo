@@ -1,3 +1,5 @@
+<p>Check html markup in DevTools.<br> Not visible components with `detach-invisible` directive are not being rerendered.</p>
+  
 <app-emoji-counter
   *ngFor="let name of names; trackBy: trackBy"
   detach-invisible
@@ -7,5 +9,12 @@
 <app-emoji-counter
   detach-invisible
   name="👽"
+  [count]="count"
+></app-emoji-counter>
+
+<p>Not detached:</p>
+
+<app-emoji-counter
+  name="💩"
   [count]="count"
 ></app-emoji-counter>
