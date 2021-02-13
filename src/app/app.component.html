@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-emoji-counter
+  *ngFor="let name of names; trackBy: trackBy"
+  detach-invisible
+  [name]="name"
+  [count]="count"
+></app-emoji-counter>
+<app-emoji-counter
+  detach-invisible
+  name="👽"
+  [count]="count"
+></app-emoji-counter>
